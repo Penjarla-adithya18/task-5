@@ -1,0 +1,232 @@
+:root {
+    --primary-color: #2d3436;
+    --secondary-color: #0984e3;
+    --accent-color: #00b894;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    background: rgba(45, 52, 54, 0.95) !important;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: var(--accent-color) !important;
+}
+
+.nav-link {
+    position: relative;
+    font-weight: 500;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--accent-color);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    min-height: 100vh;
+    color: white;
+    padding-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-section .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-section .row {
+    width: 100%;
+    justify-content: center;
+}
+
+.hero-section .col-lg-6 {
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.hero-section .lead {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.hero-image {
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.hero-image:hover {
+    transform: translateY(-10px);
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #00a884;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,184,148,0.3);
+}
+
+.section-title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 50px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    bottom: -10px;
+    left: 25%;
+    background-color: var(--accent-color);
+}
+
+.card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.skill-bars .progress {
+    height: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.skill-bars .progress-bar {
+    background-color: var(--accent-color);
+    border-radius: 5px;
+}
+
+.contact-info {
+    border-radius: 20px;
+    background: linear-gradient(135deg, #ffffff, #f8f9fa);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.social-links a {
+    color: var(--primary-color);
+    transition: all 0.3s ease;
+    margin: 0 15px;
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
+    transform: translateY(-5px);
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background-color: var(--accent-color);
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    left: -4px;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--accent-color);
+}
+
+/* Form Styles */
+.form-control {
+    border-radius: 0;
+    border: 1px solid #ddd;
+    padding: 0.8rem;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #007bff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-section {
+        height: auto;
+        padding: 100px 0 50px;
+    }
+
+    .hero-image {
+        margin-top: 2rem;
+        max-width: 300px;
+    }
+
+    .skill-tags .badge {
+        margin: 0.25rem;
+        padding: 0.4rem 0.8rem;
+    }
+} 
