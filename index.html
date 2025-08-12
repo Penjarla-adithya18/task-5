@@ -20,17 +20,20 @@
 </head>
 <body>
     <!-- Loading Spinner -->
+    <!-- Temporarily disabled for testing -->
+    <!--
     <div id="loading-spinner" class="position-fixed w-100 h-100 d-flex justify-content-center align-items-center" style="background: rgba(45, 52, 54, 0.9); z-index: 9999;">
         <div class="spinner-border text-light" role="status">
             <span class="visually-hidden">Loading...</span>
         </div>
     </div>
+    -->
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">P.N.A.S.Sresty</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -66,7 +69,7 @@
                     <h1 class="fw-bold display-4 mb-4">P.N.A.S.Sresty</h1>
                     <p class="lead fs-3 mb-4">Full Stack Developer</p>
                     <p class="hero-description mb-5">Passionate about creating beautiful and functional web experiences. Let's build something amazing together!</p>
-                    <a href="#projects" class="btn btn-primary btn-lg">View My Work</a>
+                    <a href="#projects" class="btn btn-primary btn-lg" title="View my projects">View My Work</a>
                 </div>
                 <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
                     <img src="Adithya.jpg" alt="Profile Photo" class="hero-image img-fluid">
@@ -290,7 +293,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Automated Boarding Call System</h5>
                             <p class="card-text">An intelligent system for automated boarding call announcements for airline passengers, improving efficiency and passenger experience.</p>
-                            <a href="#" class="btn btn-primary">Learn More</a>
+                            <a href="#" class="btn btn-primary project-learn-more" data-title="Automated Boarding Call System" data-description="Automates and schedules boarding announcements for flights with configurable rules and multilingual support." data-image="project1.jpeg">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -300,7 +303,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Player Interaction Platform</h5>
                             <p class="card-text">A comprehensive platform designed for players to interact, communicate, and collaborate with each other in gaming environments.</p>
-                            <a href="#" class="btn btn-primary">Learn More</a>
+                            <a href="#" class="btn btn-primary project-learn-more" data-title="Player Interaction Platform" data-description="Real-time chat, matchmaking, and community features for gamers with robust moderation tools." data-image="project2.jpeg">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -310,7 +313,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Snake and Ladder Game</h5>
                             <p class="card-text">A classic snake and ladder game implementation with modern UI/UX design and interactive gameplay features.</p>
-                            <a href="#" class="btn btn-primary">Learn More</a>
+                            <a href="#" class="btn btn-primary project-learn-more" data-title="Snake and Ladder Game" data-description="A polished implementation of the classic board game with animations and score tracking." data-image="project3.jpeg">Learn More</a>
                         </div>
                     </div>
                 </div>
@@ -370,13 +373,13 @@
                 </div>
                 <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
                     <div class="social-links">
-                        <a href="https://github.com/Penjarla-adithya18" target="_blank" class="text-white mx-3">
+                        <a href="https://github.com/Penjarla-adithya18" target="_blank" class="text-white mx-3" title="Visit my GitHub profile">
                             <i class="fab fa-github fa-lg"></i>
                         </a>
-                        <a href="https://www.linkedin.com/in/sresty" target="_blank" class="text-white mx-3">
+                        <a href="https://www.linkedin.com/in/sresty" target="_blank" class="text-white mx-3" title="Connect with me on LinkedIn">
                             <i class="fab fa-linkedin fa-lg"></i>
                         </a>
-                        <a href="#" class="text-white mx-3">
+                        <a href="#" class="text-white mx-3" title="Follow me on Twitter">
                             <i class="fab fa-twitter fa-lg"></i>
                         </a>
                     </div>
@@ -384,6 +387,25 @@
             </div>
         </div>
     </footer>
+
+    <!-- Project Details Modal -->
+    <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalTitle" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="projectModalTitle">Project</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img id="projectModalImage" src="" alt="Project image" class="img-fluid rounded mb-3" />
+            <p id="projectModalDescription" class="mb-0"></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

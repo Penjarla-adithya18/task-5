@@ -51,6 +51,19 @@ img {
 
 /* ===== Scroll to Top Button ===== */
 #scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #00b894;
+    color: white;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
     transition: all 0.3s ease;
     box-shadow: 0 5px 15px rgba(0,184,148,0.3);
 }
@@ -84,6 +97,7 @@ body {
     background: var(--light-bg);
     color: var(--text-color);
     line-height: 1.6;
+    padding-top: 70px; /* To account for fixed navbar */
 }
 
 /* ===== Navbar ===== */
@@ -285,16 +299,58 @@ body {
 }
 
 /* ===== Social Links ===== */
+.social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
 .social-links a {
     color: var(--white);
     transition: all 0.3s ease;
-    margin: 0 15px;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.5rem;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
 
 .social-links a:hover {
-    color: var(--accent-color);
+    color: var(--white);
     transform: translateY(-5px);
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.social-links a:focus {
+    outline: none;
+    color: var(--white);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Specific social link colors */
+.social-links .fa-github:hover {
+    color: #333;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.social-links .fa-linkedin:hover {
+    color: #0077b5;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.social-links .fa-twitter:hover {
+    color: #1da1f2;
+    background: rgba(255, 255, 255, 0.9);
 }
 
 /* ===== Timeline ===== */
@@ -349,6 +405,7 @@ textarea.form-control {
 /* ===== Sections ===== */
 section {
     padding: 80px 0;
+    scroll-margin-top: 70px; /* To account for fixed navbar */
 }
 
 .bg-light {
@@ -387,6 +444,7 @@ footer {
 
     section {
         padding: 60px 0;
+        scroll-margin-top: 60px;
     }
 }
 

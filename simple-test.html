@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .test-btn { padding: 10px 20px; background: blue; color: white; text-decoration: none; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>Simple Test Page</h1>
+    <p>If you can see this, the basic HTML is working!</p>
+    
+    <a href="#test-section" class="test-btn">Test Button</a>
+    
+    <div id="test-section" style="margin-top: 500px; padding: 20px; background: #f0f0f0;">
+        <h2>Test Section</h2>
+        <p>This is the test section. If the button worked, you should be able to see this.</p>
+    </div>
+    
+    <script>
+        // Simple test script
+        console.log('Simple test page loaded!');
+        
+        document.querySelector('.test-btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('test-section').scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
